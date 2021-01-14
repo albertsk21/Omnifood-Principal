@@ -1,0 +1,598 @@
+/*
+Orange color : #e67e22
+*/
+
+/* ------------------------------------------------------------ */
+/* BASIC SETUP */
+/* ------------------------------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html,
+body{
+    background-color: #fff;
+    color : #555;
+    font-family: 'Lato';
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility; 
+    overflow-x: hidden;
+}
+/* ------------------------------------------------------------ */
+/* REUSABLE COMPONENTS */
+/* ------------------------------------------------------------ */
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+
+}
+section {
+    padding: 80px 0px;
+}
+.box{
+    padding: 1%;
+}
+
+.clearfix{zoom: 1;}
+.clearfix::after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+
+}
+section{
+    background-color: #f4f4f4;
+}
+
+/* -------HEADINGS------- */
+
+ h2,
+ h1{
+    
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 200%;
+    letter-spacing: 1px;
+  
+}
+
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    word-spacing: 4px;
+}
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+h3{
+    font-weight: 400;
+    font-size: 110%;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+h2:after{
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color: #e67e22;
+    content: " ";
+    margin: 0 auto;
+    margin-top: 30px;
+}
+/* ------- PARAGRAPHS ------- */
+.long-copy{
+       width: 70%;
+       margin-left: 15%;
+       margin-right: 15%;
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+
+/* ------- ICONS ------- */
+.icon-big{
+    display: block;
+    font-size:250%;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #e67e22;
+}
+.icon-small{
+    display: inline-block;
+    color: #e67e22;
+    margin-right: 10px;
+    font-size: 120%;
+    text-align: center;
+    width: 30px;
+    /*secrets to align text and icon*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -4px;
+    
+}
+
+
+/* ------- BUTTONS ------- */
+
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    display: inline-block;
+    font-weight: 300;
+    padding: 10px 30px;
+    border-radius: 200px;
+    text-decoration: none;
+    -webkit-transition: all;
+    transition: all;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+
+}
+.btn:hover,
+.btn:active,
+input[type=submit]{
+    cursor: pointer;
+    background-color: #cf6d17;
+}
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 1px solid #e67e22;
+    color:  #e67e22;
+
+}
+
+.btn-ghost:hover,
+.btn-ghost:active{
+    color:  #fff;
+
+}
+/* ------------------------------------------------------------ */
+/* HEADER */
+/* ------------------------------------------------------------ */
+
+header {
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.7)),to(rgba(0,0,0,0.7))), url(./img/hero.jpg) center;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(./img/hero.jpg) center;
+    background-attachment: fixed;
+    background-size:cover ;
+    height: 100vh;
+}
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo-black{
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+    display: none;
+}
+
+/* Mobile nav*/
+.mobile-nav-icon{
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+    display: none;
+
+    
+}
+.mobile-nav-icon ion-icon{
+    font-size: 300%;
+}
+
+/* Main navi */
+.main-nav{
+    float: right;
+    text-transform: uppercase;
+    margin-top: 55px;
+   
+}
+.main-nav li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 40px;
+}
+
+
+.m {
+    display: inline-block;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    font-size: 90%;
+    padding: 5px 0px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #e67e22;
+}
+
+.long-copy{
+    margin-bottom: 40px;
+}
+/* Sticky navi */
+.sticky{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 9999;
+   background-color: rgba(255, 255, 255, 0.98);
+   box-shadow: 0 2px 2px #efefef;
+}
+.sticky .main-nav{
+    margin: 19px 0;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+  
+
+     padding: 17px 0px;
+     color: #555;
+
+   
+}
+.sticky .main-nav li a:hover,
+.sticky .main-nav li a:active{
+    border-bottom: 3px solid #e67e22;
+}
+.sticky .logo{display: none;}
+.sticky .logo-black{display: block; float: left;}
+
+/* ------------------------------------------------------------ */
+/* MEALS */
+/* ------------------------------------------------------------ */
+
+
+
+.meals-showcase{
+    list-style: none;
+    width: 100%;
+}
+.meals-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+
+}
+.meal-photo img{
+    opacity: 0.7;
+    width: 100%;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.meal-photo img:hover{
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+/* ------------------------------------------------------------ */
+/* HOW IT WORKS */
+/* ------------------------------------------------------------ */
+
+
+
+.section-steps{
+    margin-top: -80px;
+}
+.steps-box:first-child{
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+.steps-box:last-child{
+    padding-right: 3%;
+}
+.app-screen{
+    width: 40%;
+}
+.works-steps{
+    margin-bottom: 50px;
+}
+
+.works-steps:last-of-type{
+    margin-bottom: 80px;
+}
+.works-steps div{
+    color: #e67e22;
+    border: 2px solid #cf6d17;
+    display: inline;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;  
+    margin-right: 4%;
+}
+
+.works-steps{
+    margin-top: 55px;
+}
+
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+
+/* ------------------------------------------------------------ */
+/* CITIES */
+/* ------------------------------------------------------------ */
+.section-city{
+    background-color: #f4f4f4;
+}
+.box img{
+    width: 100%;
+}
+
+.box h3{
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.city-feature a {
+
+    text-decoration: none;
+    color: #e67e22;
+    border-bottom: 1px solid #e67e22;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.city-feature a:hover {
+    color: #000;
+    border-bottom: none;
+
+}
+.city-feature{
+    margin-top: 5px;
+}
+
+
+
+/* ------------------------------------------------------------ */
+/* TESTIMONIALS */
+/* ------------------------------------------------------------ */
+
+.section-testimonials{
+    background-image:-webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.8)),to(rgba(0, 0, 0, 0.8))), url(/resources/img/back-customers.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(/resources/img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+blockquote{
+    font-style: italic;
+    padding: 2%;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+ 
+    
+}
+blockquote::before{
+    content: "\201C";
+    font-size: 450%;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+.profile-photo{
+    width: 45px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+/* ------------------------------------------------------------ */
+/* SIGN UP */
+/* ------------------------------------------------------------ */
+
+ li {
+    list-style: none;
+}
+
+.plan-box{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-price{
+    font-size: 250%;
+    color: #e67e22;
+    font-weight: 100;
+}
+.plan-price span{
+    font-size: 40%;
+}
+
+.plan-price-per-meal{
+    font-size: 80%;
+}
+.plan-box ul{
+    padding: 10px;
+}
+.plan-box ul li{
+    font-size: 90%;
+    padding: 10px;
+}
+
+.plan-box div:last-child{
+    text-align: center;
+}
+/* ------------------------------------------------------------ */
+/* FORM */
+/* ------------------------------------------------------------ */
+.contact-form{
+    width: 50%;
+    margin: 0 auto;
+}
+input[type=email],
+input[type=text],
+select,
+textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+}
+
+textarea{
+    height :100px   
+}
+input[type=checkbx]{
+    margin: 10px 5px;
+}
+*:focus{outline: none;}
+
+/* ------------------------------------------------------------ */
+/* FOOTER */
+/* ------------------------------------------------------------ */
+
+footer{
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+
+.social-links li ,
+.footer-nav li{
+    list-style: none;
+    float: left;
+    margin-right: 20px;
+}
+
+.social-links{
+    float: right;
+    font-size: 160%;
+}
+.footer-nav{
+    font-size: large;
+}
+.footer-nav li:last-child,
+.social-links li:last-child{
+    margin-right: 0;
+
+}
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    text-decoration: none;
+    border: 0;
+    color: #888;
+}
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color: #ddd;
+}
+.social-links li a:hover,
+.social-links li a:active{
+    color: #ddd;
+}
+footer p{
+    color: 888;
+    text-align: center;
+    margin-top: 30px;
+}
+footer{
+    padding: 50px 30px;
+
+}
+
+/* ------------------------------------------------------------ */
+/* Animated */
+/* ------------------------------------------------------------ */
+
+.js--wp-1,
+.js--wp-2{
+    opacity: 0;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s ;
+}
+.js--wp-3{
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s ;
+
+}
+
+
+.js--wp-1 .animate__animated,
+.js--wp-2 .animate__animated{ 
+       opacity: 1;
+}
